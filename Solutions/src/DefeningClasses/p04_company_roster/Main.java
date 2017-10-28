@@ -17,7 +17,12 @@ public class Main {
                     input[3]
             );
             if(input.length>4){
-                newEmp.setEmail(input[4]);
+                if(input[4].contains("@")){
+                    newEmp.setEmail(input[4]);
+                }else{
+                    newEmp.setAge(Integer.parseInt(input[4]));
+                }
+
                 if(input.length>5){
                     newEmp.setAge(Integer.parseInt(input[5]));
                 }
